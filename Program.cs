@@ -1,19 +1,18 @@
 ﻿using FizzBuzz;
 
-class Program
+Dictionary<int, string> map = new Dictionary<int, string>();
+map.Add(2, "faa");
+map.Add(3, "fizz");
+map.Add(5, "buzz");
+map.Add(7, "Shee");
+map.Add(9, "Woo");
+map.Add(11, "Boo");
+
+Problem myObject = new Problem(); 
+
+var result = myObject.FooFizzBuzz(30, map);
+
+foreach (var item in result)
 {
-    public static int[] divisors = [2, 3, 5, 7, 11, 13]; // The initial value of divisors, if the user wants he/she can change it
-    // as he/she wants
-
-    static void Main(string[] args)
-    {
-        Problem myObject = new Problem(); // creating a new object for the problem FizzBuzz
-
-        var result = myObject.FooFizzBuzz(30); // Giving 30 to the FooFizzBuzz function and receiving the array string to the result
-
-        foreach (var item in result)
-        {
-            Console.WriteLine(item); // Printing the result for checking the result
-        }
-    }
+    Console.WriteLine(item);
 }
